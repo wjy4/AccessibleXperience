@@ -20,7 +20,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-5 col-md-6 col-12 pb-4">
-                <h1>Comments</h1>
+                <h1>Discussion</h1>
                 <div class="comment mt-4 text-justify float-left">
                     <img src="https://i.imgur.com/yTFUilP.jpg" alt="" class="rounded-circle" width="40" height="40">
                     <h4>Jhon Doe</h4>
