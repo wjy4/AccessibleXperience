@@ -67,6 +67,18 @@
           <p class="card-text"><small class="text-muted"><i class="fas fa-eye"></i>1000<i class="far fa-user"></i> More <i class="fas fa-calendar-alt"></i>July 3, 2023</small></p>
         </div>
         </a>
+
+        <div class="card">
+        <a href="https://fuzzymath.com/resources/web-accessibility-checklist/">
+        <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpvuqNdp2AsgwIS8J4uRtGEm9hJ2pH2pHeHw&usqp=CAU" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Web Accessibility Checklist</h5>
+          <p class="card-text">
+          Before launch, double check that…
+          </p>
+          <p class="card-text"><small class="text-muted"><i class="fas fa-eye"></i>1000<i class="far fa-user"></i> Accessibility <i class="fas fa-calendar-alt"></i>July 3, 2023</small></p>
+      </div>
+        </a>
       </div>
     </div>
   </div>
