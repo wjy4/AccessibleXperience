@@ -23,7 +23,7 @@
         <a href="/news">
         <img class="card-img-top" src="https://play-lh.googleusercontent.com/jQ3ETPwi-0PLLH6HuUFz13JTKYCf40lZn-TTPccOVPFuZdJA2txX9QKgzn-SZt2uSyLb" alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">Document 2</h5>
+          <h5 class="card-title">Web Accessibility News </h5>
           <p class="card-text">Check out the lates news around the world</p>
           <p class="card-text"><small class="text-muted"><i class="fas fa-eye"></i>1000<i class="far fa-user"></i> News <i class="fas fa-calendar-alt"></i>July 3, 2023</small></p>
         </div>
@@ -63,7 +63,7 @@
         <a href="#">
         <img class="card-img-top" src="https://i.scdn.co/image/1fb3400b985cd2d891aa03ef15fca1c04b7c9a3b" alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">Document 6</h5>
+          <h5 class="card-title">Discorver</h5>
           <p class="card-text">Learn more about it !</p>
           <p class="card-text"><small class="text-muted"><i class="fas fa-eye"></i>1000<i class="far fa-user"></i> More <i class="fas fa-calendar-alt"></i>July 3, 2023</small></p>
         </div>
