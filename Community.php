@@ -1,71 +1,60 @@
-<nav class="navbar navbar-expand-sm navbar-dark">
-    <img src="https://i.imgur.com/CFpa3nK.jpg" width="20" height="20" class="d-inline-block align-top rounded-circle" alt=""> 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation"> 
-        <span class="navbar-toggler-icon"></span> 
-    </button>  
-</nav>
-<!-- Main Body -->
+<title>Comments</title>
+
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('css/comment.css'); ?>">
+
 <section>
     <div class="container">
         <div class="row">
             <div class="col-sm-5 col-md-6 col-12 pb-4">
                 <h1>Discussion</h1>
-                <div class="comment mt-4 text-justify float-left">
+                
+                <?php if($product):?> <!-- check if the product Model database has any data -->
+                 <?php foreach ($product as $row) : ?>
+                <div class="comment mt-4 text-justify float-left"> <br><br>
                     <img src="https://i.imgur.com/yTFUilP.jpg" alt="" class="rounded-circle" width="40" height="40">
-                    <h4>Jhon Doe</h4>
-                    <span>- 20 October, 2018</span>
-                    <br>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
+                    <h4> <?php echo $row['comment_sender_name']; ?></h4>
+                    <span> -<?php echo $row['date']; ?></span>
+                    <p><?php echo $row['comment']; ?></p> <br>
+<!--                     
+                    <button type="button" data-toggle="reply-form" data-target="comment-1-reply-form" class="btn">Reply</button>
+
+            <form method="POST"  action="<?php echo base_url(); ?>/CommentControler/store" class="reply-form d-none" id="comment-1-reply-form">
+                <textarea placeholder="Reply to comment" rows="5"></textarea><br>
+                <button type="submit" class="btn">Submit</button>
+                <button type="button" data-toggle="reply-form" data-target="comment-1-reply-form" class="btn" >Cancel</button> -->
+            </form>
                 </div>
-                <div class="text-justify darker mt-4 float-right">
-                    <img src="https://i.imgur.com/CFpa3nK.jpg" alt="" class="rounded-circle" width="40" height="40">
-                    <h4>Rob Simpson</h4>
-                    <span>- 20 October, 2018</span>
-                    <br>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
-                </div>
-                <div class="comment mt-4 text-justify">
-                    <img src="https://i.imgur.com/yTFUilP.jpg" alt="" class="rounded-circle" width="40" height="40">
-                    <h4>Jhon Doe</h4>
-                    <span>- 20 October, 2018</span>
-                    <br>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
-                </div>
-                <div class="darker mt-4 text-justify">
-                    <img src="https://i.imgur.com/CFpa3nK.jpg" alt="" class="rounded-circle" width="40" height="40">
-                    <h4>Rob Simpson</h4>
-                    <span>- 20 October, 2018</span>
-                    <br>
-                    <p >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
-                </div>
+                
+                    <?php endforeach; ?>
+                    <?php endif; ?>
+                    
             </div>
-            <div class="col-lg-4 col-md-5 col-sm-4 offset-md-1 offset-sm-1 col-12 mt-4">
-                <form id="algin-form">
+            
+
+                <div class="col-lg-4 col-md-5 col-sm-4 offset-md-1 offset-sm-1 col-12 mt-4">
+                <form id="algin-form" action="<?php echo base_url(); ?>/CommentControler/store" method="post">
                     <div class="form-group">
                         <h4>Leave a comment</h4>
                         <label for="message">Message</label>
-                        <textarea name="msg" id=""msg cols="30" rows="5" class="form-control" style="background-color: white;"></textarea>
+                        <textarea name="comment" id=""msg cols="30" rows="10" class="form-control" style="background-color: white;" required></textarea>
                     </div>
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" name="name" id="fullname" class="form-control">
+                        <input type="text" name="comment_sender_name" id="fullname" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="text" name="email" id="email" class="form-control">
+                        <input type="text" name="email" id="email" class="form-control"required>
                     </div>
                     <div class="form-group">
-                        <p class="text-secondary">If you have a <a href="#" class="alert-link">gravatar account</a> your address will be used to display your profile picture.</p>
+                        <p class="text-secondary">If you have a <a href="#" class="alert-link">account with us</a> your address will be used to display your profile picture.</p>
                     </div>
                     <div class="form-inline">
                         <input type="checkbox" name="check" id="checkbx" class="mr-1">
                         <label for="subscribe">Subscribe me to the newlettter</label>
                     </div>
                     <div class="form-group">
-                        <button type="button" id="post" class="btn">Post Comment</button>
+                        <button type="submit" id="post" class="btn">Post Comment</button>
                     </div>
                 </form>
             </div>
-        </div>
-    </div>
-</section>
