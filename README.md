@@ -16,10 +16,6 @@ Prerequisites
 Basic knowledge of HTML, CSS, and JavaScript.
 Web development environment (e.g., text editor, web browser).
 
-# Installation
-Clone the repository: git clone https://github.com/your/repository.git
-Navigate to the code templates directory: cd code-templates
-Open the desired template file in your preferred text editor.
 # Usage
 Choose a code template that aligns with the accessibility feature you want to implement.
 Follow the provided documentation and guidelines to integrate the code template into your web project.
